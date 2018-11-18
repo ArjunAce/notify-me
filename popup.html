@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Notify Me</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <style>
+    /* Modal Structure */
+
+    html,
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      margin: 0;
+      min-height: 180px;
+      padding: 0;
+      width: 384px;
+    }
+
+    h1 {
+      font-family: 'Menlo', monospace;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
+      color: #2f5876;
+    }
+
+    a:link,
+    a:visited {
+      color: #000000;
+      outline: 0;
+      text-decoration: none;
+    }
+
+    img {
+      width: 30px;
+    }
+
+    .modal-header {
+      align-items: center;
+      border-bottom: 0.5px solid #dadada;
+    }
+
+    .modal-content {
+      padding: 0 20px;
+    }
+
+    .modal-icons {
+      border-top: 0.5px solid #dadada;
+      height: 50px;
+      width: 100%;
+    }
+
+
+    .logo {
+      padding: 16px;
+    }
+
+    .logo-icon {
+      vertical-align: text-bottom;
+      margin-right: 12px;
+    }
+
+    .version {
+      color: #444;
+      font-size: 18px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 40px;
+      text-align: center;
+      background: #574584;
+
+    }
+
+    .flex {
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
+      width: 120px;
+    }
+
+    .flex:hover {
+      opacity: 0.4;
+    }
+
+    .flex .fa {
+      font-size: 40px;
+      /*color: #2f5876;*/
+      color: #59fff1fa;
+    }
+
+
+  </style>
+  <style>
+    #responesBlock {
+      color: #696E79;
+      font-size: 14px;
+      margin-top: 14px;
+      display: inline-block;
+      text-align: center
+    }
+
+
+    .pdp-price {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1;
+      /*color: #282C3F;*/
+      color: #008cf3;
+      margin-right: 12px;
+    }
+
+    .pdp-mrp {
+      height: 18px;
+      opacity: 0.8;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #282C3F;
+      margin-right: 12px;
+    }
+
+    .pdp-discount {
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      /*color: #FF905A;*/
+      color: #ff0000;
+    }
+    .pointer{
+      cursor: pointer;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+
+<body>
+  <div class="modal-header">
+    <h1 class="logo">
+      <img class="logo-icon" src="images/notify-me-logo.png">Notify Me
+      <span class="version">(1.0.0)</span>
+    </h1>
+  </div>
+
+  <div class="modal-content">
+    <p id="headerPara">
+      Myntra Product ID: <input id="productIdInput" type="text">
+      <i id="getPriceButton" class="fa fa-search pointer"></i>
+      <!--<button type="button" id="getPriceButton">-->
+
+        <!--Get Price</button>-->
+    </p>
+    <div style="display: none" id="responesBlock" class="pdp-discount-container">
+      <div style="padding: 10px; font-weight: bold; font-size: 16px;"  id="productNameLabel">
+        Levis Men Black Slim Fit Low-Rise Clean Look Stretchable Jeans 511
+      </div>
+      <div style="padding-top: 5px; padding-bottom: 15px;">
+        <strong class="pdp-price">Rs. 1624</strong>
+        <s class="pdp-mrp">Rs. 2499</s>
+        <span class="pdp-discount">(35% OFF)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-icons">
+    <div class="flex-container">
+      <div class="flex">
+          <a class="pointer" id="backToHome"title="Search Another Product">
+          <i class="fa fa-home"></i>
+        </a>
+      </div>
+      <div class="flex">
+        <a class="pointer" id="goToProductPage" title="Open Product Page" target="_blank">
+          <i class="fa fa-plane"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
