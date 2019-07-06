@@ -3,4 +3,4 @@ Chrome Extension for getting product price with timely notification
 Currently supports only products of Myntra.
 
 Screenshot
-![alt text](https://pasteboard.co/ImLg6BA.png)
+![screenshot](https://raw.githubusercontent.com/ArjunAce/notify-me/master/Notify_me%20screenshot.png)
